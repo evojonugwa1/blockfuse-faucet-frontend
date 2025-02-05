@@ -29,6 +29,13 @@ export default function BlockfuseFaucet() {
   });
 
   // Get the last claimed timestamp for the user
+  const lastClaimedTimestamp = useReadContract({
+    address: formattedFaucetAddress,
+    abi: faucetAbi,
+    functionName: "lastClaimedTimestamp",
+    args: address ? [address] : undefined,
+  });
+
   
 
   // Calculate if the user can claim ETH
