@@ -1,0 +1,11 @@
+{
+    "name": "Next.js: debug full stack",
+    "type": "node-terminal",
+    "request": "launch",
+    "command": "${workspaceFolder}/node_modules/next/dist/bin/next",
+    "serverReadyAction": {
+      "pattern": "- Local:.+(https?://.+)",
+      "uriFormat": "%s",
+      "action": "debugWithChrome"
+    }
+  }
